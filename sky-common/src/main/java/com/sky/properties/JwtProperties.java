@@ -1,12 +1,10 @@
 package com.sky.properties;
 
-import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
 @ConfigurationProperties(prefix = "sky.jwt")
-@Data
 public class JwtProperties {
 
     /**
@@ -23,4 +21,10 @@ public class JwtProperties {
     private long userTtl;
     private String userTokenName;
 
+    public String getAdminSecretKey() { return adminSecretKey; }
+    public long getAdminTtl() { return adminTtl; }
+    public String getAdminTokenName() { return adminTokenName; }
+    public String getUserSecretKey() { return userSecretKey; }
+    public long getUserTtl() { return userTtl; }
+    public String getUserTokenName() { return userTokenName; }
 }

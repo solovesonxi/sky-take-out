@@ -1,13 +1,11 @@
 package com.sky.properties;
 
-import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
 @ConfigurationProperties(prefix = "sky.wechat")
-@Data
 public class WeChatProperties {
 
     private String appid; //小程序的appid
@@ -20,4 +18,13 @@ public class WeChatProperties {
     private String notifyUrl; //支付成功的回调地址
     private String refundNotifyUrl; //退款成功的回调地址
 
+    public String getAppid() { return appid; }
+    public String getSecret() { return secret; }
+    public String getMchid() { return mchid; }
+    public String getMchSerialNo() { return mchSerialNo; }
+    public String getPrivateKeyFilePath() { return privateKeyFilePath; }
+    public String getApiV3Key() { return apiV3Key; }
+    public String getWeChatPayCertFilePath() { return weChatPayCertFilePath; }
+    public String getNotifyUrl() { return notifyUrl; }
+    public String getRefundNotifyUrl() { return refundNotifyUrl; }
 }

@@ -9,15 +9,20 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>sky-pojo</artifactId>
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>1.18.38</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.9.2</version>
+            <version>2.15.2</version>
         </dependency>
         <dependency>
             <groupId>com.github.xiaoymin</groupId>

@@ -15,12 +15,17 @@ import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * 配置类，注册web层相关组件
  */
 @Configuration
 @Slf4j
 public class WebMvcConfiguration extends WebMvcConfigurationSupport {
+
+    private static final Logger log = LoggerFactory.getLogger(WebMvcConfiguration.class);
 
     @Autowired
     private JwtTokenAdminInterceptor jwtTokenAdminInterceptor;
