@@ -1,10 +1,22 @@
 package com.sky.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class Employee implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private Long id;
@@ -33,69 +45,4 @@ public class Employee implements Serializable {
 
     private Long updateUser;
 
-    public Employee() {
-    }
-
-    public Employee(Long id, String username, String name, String password, String phone, String sex, String idNumber, Integer status, LocalDateTime createTime, LocalDateTime updateTime, Long createUser, Long updateUser) {
-        this.id = id;
-        this.username = username;
-        this.name = name;
-        this.password = password;
-        this.phone = phone;
-        this.sex = sex;
-        this.idNumber = idNumber;
-        this.status = status;
-        this.createTime = createTime;
-        this.updateTime = updateTime;
-        this.createUser = createUser;
-        this.updateUser = updateUser;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public String getIdNumber() {
-        return idNumber;
-    }
-
-    public Integer getStatus() {
-        return status;
-    }
-
-    public java.time.LocalDateTime getCreateTime() {
-        return createTime;
-    }
-
-    public java.time.LocalDateTime getUpdateTime() {
-        return updateTime;
-    }
-
-    public Long getCreateUser() {
-        return createUser;
-    }
-
-    public Long getUpdateUser() {
-        return updateUser;
-    }
 }
